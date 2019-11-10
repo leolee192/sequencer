@@ -1,18 +1,13 @@
 sequence
 ========
 
-**`sequence` is currently iced since I don't have time to continue, and should be considered unstable until further notice. If anyone's interested in continue development of this, I would be happy to add you to the project.**
+[![GoDoc](http://godoc.org/github.com/leolee192/sequencer?status.svg)](http://godoc.org/github.com/leolee192/sequencer) 
 
-[sequencer.io](http://sequencer.io)
-
-[![GoDoc](http://godoc.org/github.com/surge/sequence?status.svg)](http://godoc.org/github.com/surge/sequence) 
-
-[![GoDoc](http://godoc.org/github.com/surge/sequence/cmd/sequence?status.svg)](http://godoc.org/github.com/surge/sequence/cmd/sequence)
-
+[![GoDoc](http://godoc.org/github.com/leolee192/sequencer/cmd/sequence?status.svg)](http://godoc.org/github.com/leolee192/sequencer/cmd/sequence)
 
 `sequence` is a _high performance sequential log scanner, analyzer and parser_. It _sequentially_ goes through a log message, _parses_ out the meaningful parts, without the use regular expressions. It can achieve _high performance_ parsing of **100,000 - 200,000 messages per second (MPS)** without the need to separate parsing rules by log source type.
 
-**If you have a set of logs you would like me to test out, please feel free to [open an issue](https://github.com/surge/sequence/issues) and we can arrange a way for me to download and test your logs.**
+**If you have a set of logs you would like me to test out, please feel free to [open an issue](https://github.com/leolee192/sequencer/issues) and we can arrange a way for me to download and test your logs.**
 
 ### Motivation
 
@@ -68,39 +63,27 @@ Performance can be improved by adding more cores:
 ### Limitations
 
 * `sequence` does not handle multi-line logs. Each log message must appear as a single line. So if there's multi-line logs, they must first be converted into a single line.
-* `sequence` has only been tested with a limited set of system (Linux, AIX, sudo, ssh, su, dhcp, etc etc), network (ASA, PIX, Neoteris, CheckPoint, Juniper Firewall) and infrastructure application (apache, bluecoat, etc) logs. If you have a set of logs you would like me to test out, please feel free to [open an issue](https://github.com/strace/sequence/issues) and we can arrange a way for me to download and test your logs.
+* `sequence` has only been tested with a limited set of system (Linux, AIX, sudo, ssh, su, dhcp, etc etc), network (ASA, PIX, Neoteris, CheckPoint, Juniper Firewall) and infrastructure application (apache, bluecoat, etc) logs. If you have a set of logs you would like me to test out, please feel free to [open an issue](https://github.com/leolee192/sequencer/issues) and we can arrange a way for me to download and test your logs.
 
 ### Usage
 
 To run the unit tests, you need to be in the top level sequence dir:
 
 ```
-go get github.com/strace/sequence
-cd $GOPATH/src/github.com/strace/sequence
+go get github.com/leolee192/sequencer
+cd $GOPATH/src/github.com/leolee192/sequencer
 go test
 ```
 
 To run the actual command you need to
 
 ```
-cd $GOPATH/src/github.com/strace/sequence/cmd/sequence
+cd $GOPATH/src/github.com/leolee192/sequencer/cmd/sequence
 go run sequence.go
 ```
 
-Documentation is available at [sequencer.io](http://sequencer.io).
+Documentation is available at [wiki](https://github.com/leolee192/sequencer/wiki).
 
-### License
+### History
 
-Copyright (c) 2014 Dataence, LLC. All rights reserved.
-
-Licensed under the Apache License, Version 2.0 (the "License");
-you may not use this file except in compliance with the License.
-You may obtain a copy of the License at
-
-http://www.apache.org/licenses/LICENSE-2.0
-
-Unless required by applicable law or agreed to in writing, software
-distributed under the License is distributed on an "AS IS" BASIS,
-WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
-See the License for the specific language governing permissions and
-limitations under the License.
+The project originated from [zentures/sequence](https://github.com/zentures/sequence) , which was iced in 2017. Since I tried and couldn't contact the original author for weeks, I decided to restart the project here in Nov 2019.

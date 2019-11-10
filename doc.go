@@ -17,5 +17,5 @@
 // without the use regular expressions. It can parse over 100,000 messages per
 // second without the need to separate parsing rules by log source type.
 //
-// Documentation and other information are available at sequencer.io
+// Documentation and other information are available at https://github.com/leolee192/sequencer/wiki
 package sequence
