@@ -82,6 +82,8 @@ cd $GOPATH/src/github.com/leolee192/sequencer/cmd/sequence
 go run sequence.go
 ```
 
+If you hoping to run few quick tests, you can find some sample log messages in [loghub](https://github.com/logpai/loghub).
+
 Documentation is available at [wiki](https://github.com/leolee192/sequencer/wiki).
 
 ### History
